@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+    <style>
+      body{
+        animation: gradient 12s ease infinite;
+        background: linear-gradient(45deg, #ff9a9e, #f6d365, #fbc2eb, #a18cd1, #89f7fe, #66d9ff);
+        background-size: 600% 600%;
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Header layout */
+      header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:0.75rem 1rem;
+        background: rgba(255,255,255,0.9);
+        backdrop-filter: blur(4px);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top:0;
+        z-index:1000;
+      }
+
+      .logo{
+        font-weight:700;
+        font-size:1.25rem;
+        color:#222;
+      }
+
+      nav{
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.5rem 1rem;
+      }
+
+      nav a{
+        color:#222;
+        text-decoration:none;
+        padding:0.25rem 0.5rem;
+        border-radius:4px;
+        transition:background-color .2s,color .2s;
+      }
+
+      nav a:hover{
+        background:#e9ecef;
+      }
+
+      /* Make main container stand out from background */
+      .container{
+        background: rgba(255,255,255,0.95);
+        border-radius:6px;
+        padding:1.25rem;
+      }
+
+      @media(max-width:576px){
+        nav a{ font-size:0.9rem; padding:0.4rem; }
+      }
+
+      @keyframes gradient{
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">sonicElectronic</div>
+      <nav>
+        <a href="../home/index.html">Home</a>
+        <a href="../about/about%20html.html">About</a>
+        <a href="../shop/shop%20html.html">Shop</a>
+        <a href="../contact/contact.html">Contact</a>
+        <a href="../login-register%20webpage/login%20html%20webpage.html">log in</a>
+        <a href="../shop/shop%20html.html">Cart</a>
+      </nav>
+    </header>
+    <div class="container my-3 my-sm-5">
+      <h1 class="mb-sm-4 text-center">Contact</h1>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h4>Address:</h4>
+          <address>
+            <strong> Extra حي العزيزية، JCZA2835، 2835 9085  </strong><br />
+            لامير محمد بن عبدالعزيز الفرعي,<br />
+            Jeddah,Saudi Arabia<br />
+            <abbr title="Telephone">Tel:</abbr
+            ><a href="tel:+9665678765556">+9665678765556</a><br />
+            <abbr title="Mail">E-Mail:</abbr
+            ><a href="mailto:info@sonice.com">info@sonice.com</a>
+          </address>
+        </div>
+        <div class="col-12 col-md-6">
+          <h4>Opening hours:</h4>
+          <p>
+            Sat-Thu:<span class="float-right"> 9 am - 10 pm</span><br />
+            Friday:<span class="float-right"> Off</span><br />
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 mb-3">
+          <h4>Send us a message</h4>
+          <form action="#">
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label for="name">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="example@email.com"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label for="telephone">Telephone</label>
+                  <input
+                    type="tel"
+                    id="telephone"
+                    class="form-control"
+                    placeholder="9876543210"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="form-group">
+                  <label for="select">Department:</label>
+                  <select
+                    id="select"
+                    class="form-control"
+                    aira-describedby="select-helpBlock"
+                    required
+                  >
+                    <option value="">- select here -</option>
+                    <option value="business">Business</option>
+                    <option value="Sale">Sale</option>
+                    <option value="Support">Support</option>
+                  </select>
+                  <small id="select-helpBlock" class="form-text"
+                    >Please select the recipient of your message.</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="textarea">Message:</label>
+              <textarea
+                id="textarea"
+                class="form-control"
+                rows="5"
+                placeholder="Write your message here.."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </form>
+        </div>
+        <div class="col-12 col-lg-6">
+          <h4>Where to find us:</h4>
+          <div class="embed embed-responsive-4by3">
+            <<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.733323150327!2d39.179232275191474!3d21.557280380227656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d1612549eea5%3A0xeb06b7fbf798217!2seXtra!5e0!3m2!1sen!2ssa!4v1768330066967!5m2!1sen!2ssa" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+      integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+      integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
