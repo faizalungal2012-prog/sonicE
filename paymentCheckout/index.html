@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/index.css" />
+		<title>checkout</title>
+	</head>
+	<body>
+		<div class="card">
+			<div class="card__header">
+				<img src="./icons/logo.png" class="logo" />
+				<h1>Payment information</h1>
+			</div>
+			<form action="process_payment.php" method="POST">
+				<div class="form-group">
+					<label for="full-name">Full Name</label>
+					<input
+						class="full-name empty"
+						type="text"
+						name="full-name"
+						aria-label="Full Name"
+						placeholder="Faiz Alungal"
+						required
+					/>
+				</div>
+
+				<div class="icon-group-container">
+					<label for="card-number">Card Number</label>
+					<div class="icon-group empty">
+						<input
+							type="text"
+							name="card-number"
+							aria-label="Card Number"
+							class="empty"
+							placeholder="1234 1234 1234 1234"
+							required
+						/>
+						<img
+							id="card-icon"
+							src="./icons/credit-card.png"
+							height="14"
+							width="14"
+						/>
+					</div>
+				</div>
+
+				<div class="row-group">
+					<div class="form-group">
+						<label for="expiration">Expiration Date</label>
+						<input
+							class="expiration-input empty"
+							type="tel"
+							name="expiration"
+							minlength="5"
+							maxlength="5"
+							pattern="/{5}/"
+							placeholder="MM/YY"
+							required
+						/>
+					</div>
+					<div class="icon-group-container">
+						<label for="cvv">CVV</label>
+						<div class="icon-group empty">
+							<input
+								class="cvv-input empty"
+								type="tel"
+								maxlength="3"
+								placeholder="···"
+								name="cvv"
+								required
+							/>
+							<img
+								id="info-icon"
+								src="./icons/info.png"
+								height="14"
+								width="14"
+							/>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="disabled" disabled>Confirm payment</button>
+			</form>
+			<div class="verify-info">
+				<small>Verify the information is correct</small>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+		<script src="./index.js" defer></script>
+	</body>
+</html>
